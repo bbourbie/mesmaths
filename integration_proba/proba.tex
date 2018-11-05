@@ -1,0 +1,83 @@
+% !TeX spellcheck = fr_FR
+\documentclass[a4paper,twoside,11pt]{book}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{makeidx}
+\usepackage{nomencl}
+\usepackage{amsthm}
+\usepackage{amssymb}
+\usepackage{mathrsfs}
+\usepackage{amsmath}
+
+
+\title{Intégration, Probabilités et Processus Aléatoires}
+\author{Benoît Bourbié}
+
+\newtheorem{definition}{Définition}[section]
+
+\makeindex
+\makenomenclature
+
+\begin{document}
+\maketitle
+
+\part{Intégration}
+
+\chapter{Espaces mesurés}
+
+L'idée de départ de la théorie de la mesure est d'assigner un nombre réel positif (la mesure de cet sous-ensemble) à  chaque sous-ensemble d'un ensemble donné, de manière à satisfaire certaines propriétés naturelles d'additivité (la mesure d'une réunion disjointe doit être la somme des mesures).
+
+\section{Ensembles mesurables}
+
+\begin{definition}
+Soit E un ensemble quelconque. Une tribu (ou $\sigma$-algèbre) sur E est une
+famille $\mathcal{A}$ de parties de E telle que ($ \mathcal{A} \subset \mathcal{P}(E)$) :
+\begin{itemize}
+\item $E \in \mathcal{A}$
+\item $A \in \mathcal{A} \Rightarrow A^{c} \in \mathcal{A}$
+\item Si $A_{n} \in  \mathcal{A} $ pour tout $n \in \mathbb{N}$, on a a aussi $\bigcup\limits_{n \in \mathbb{N}} A_{n}  \in \mathcal{A}$.
+\end{itemize}
+\end{definition}
+
+Les éléments de $\mathcal{A}$ sont appelés les parties mesurables de la tribu
+$\mathcal{A}$, ou parfois $\mathcal{A}$-mesurables si il y a ambiguïté.
+
+
+On dit que E est un espace mesurable.
+
+
+Énonçons quelques conséquences de la définition:
+
+
+\begin{itemize}
+\item $\varnothing \in  \mathcal{A}$
+\item Si $A_{n} \in  \mathcal{A} $ pour tout $n \in \mathbb{N}$, on a a aussi $\bigcap\limits_{n \in \mathbb{N}} A_{n}  \in \mathcal{A}$.
+\item Puisque nous pouvons toujours prendre $A_n = \varnothing$ pour n assez grand, $\mathcal{A}$ est stable par unions (ou intersections) finis.
+\item $\mathcal{A}$  est stable par intersections ou par unions finis ou dénombrables mais dans le cas indénombrables, ce n'est pas défini.
+\end{itemize}
+
+\paragraph*{Exemples:}
+\begin{itemize}
+\item $ \mathcal{A} = \mathcal{P}(E)$
+\item $ \mathcal{A} = {  \varnothing , E} $
+\item l'ensemble des parties de E qui sont (au plus) dénombrables ou dont le complémentaire
+est (au plus) dénombrable forme une tribu sur E.
+\end{itemize}
+
+
+Pour avoir des exemples plus intéressants, on remarque qu'une intersection quelconque de tribus est encore une tribu. Ceci conduit à la définition suivante.
+
+\begin{definition} Soit  $\mathcal{C}$ un sous-ensemble de $\mathcal{P}(E)$. Il existe alors une plus petite tribu sur E qui contienne $\mathcal{C}$. Cette tribu notée $\sigma(\mathcal{C})$ peut etre définie par
+
+$$
+	\sigma(\mathcal{C}) = \bigcap_{\mathcal{A} \text{tribu t.q.}  \mathcal{C} \subset \mathcal{A} } \mathcal{A}
+$$
+
+$\sigma(\mathcal{C})$ est appelée la tribu engendrée par $ \mathcal{C}$.
+\end{definition}
+
+\paragraph*{Tribu borélienne.} Pour donner un premier exemple de l'intérêt de la notion de tribu engendrée, considérons le cas où $E$
+est un espace topologique.
+
+\end{document}
+
